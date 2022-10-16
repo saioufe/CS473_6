@@ -31,12 +31,10 @@ class HomeFragment : Fragment() {
             mParam2 = requireArguments().getString(ARG_PARAM2)
         }
         itemsList.clear()
-        itemsList.add(Items(R.drawable.ic_shopping_cart_foreground, "Buying"))
-        itemsList.add(Items(R.drawable.ic_shop_foreground, "Selling"))
-        itemsList.add(Items(R.drawable.ic_case_foreground, "Trades"))
-        itemsList.add(Items(R.drawable.ic_video_button_foreground, "Videos"))
-        itemsList.add(Items(R.drawable.ic_deals_foreground, "Deals"))
-        itemsList.add(Items(R.drawable.ic_book_foreground, "Case Study"))
+        itemsList.add(Items(R.drawable.ic_overview_foreground, "Overview"))
+        itemsList.add(Items(R.drawable.ic_aboutme_foreground, "About Me"))
+        itemsList.add(Items(R.drawable.ic_experience_foreground, "Experience"))
+        itemsList.add(Items(R.drawable.ic_book_foreground, "Contact Info"))
     }
 
     override fun onCreateView(
