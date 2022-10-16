@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/main_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/main_title_text"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:paddingStart="@dimen/main_title_padding"
+        android:paddingEnd="@dimen/main_title_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/main_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="125dp"
+        android:layout_marginHorizontal="10dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:layout_marginTop="40dp"
+        android:scrollbars="vertical"
+        android:verticalSpacing="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_text_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".HomeFragment">-->
+
+
+    <!--&lt;!&ndash;    <GridLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/main_grid_layout"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="410dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_weight="3"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:background="@color/background"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:columnCount="2"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:padding="20dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:rowCount="3"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/textView2">&ndash;&gt;-->
+
+    <!--    <GridView-->
+    <!--        android:id="@+id/main_grid_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:numColumns="auto_fit"-->
+    <!--        android:stretchMode="spacingWidthUniform"-->
+    <!--        android:verticalSpacing="5dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--&lt;!&ndash;        <include&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            layout="@layout/home_grid_element" />&ndash;&gt;-->
+    <!--&lt;!&ndash;    <include&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;        layout="@layout/home_grid_element" />&ndash;&gt;-->
+    <!--&lt;!&ndash;    <include&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;        layout="@layout/home_grid_element" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <include&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            layout="@layout/home_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_rowWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_columnWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:elevation="10dp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <include&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            layout="@layout/home_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_rowWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_columnWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:elevation="10dp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <include&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            layout="@layout/home_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_rowWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_columnWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:elevation="10dp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <include&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            layout="@layout/home_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_rowWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_columnWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:elevation="10dp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <include&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/include_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            layout="@layout/home_grid_element"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_rowWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_columnWeight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:elevation="10dp" />&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;    </GridLayout>&ndash;&gt;-->
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
