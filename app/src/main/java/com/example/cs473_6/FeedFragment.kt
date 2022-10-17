@@ -1,19 +1,10 @@
 package com.example.cs473_6
 
-import com.example.cs473_6.data.Product.Companion.createProductsList
-import com.example.cs473_6.data.Product
 import android.os.Bundle
-import android.util.Log
-import com.example.cs473_6.FeedFragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.cs473_6.R
-import androidx.recyclerview.widget.RecyclerView
-import com.example.cs473_6.adaptors.ProductsAdaptor
-import androidx.recyclerview.widget.LinearLayoutManager
-import java.util.ArrayList
 
 /**
  * A simple [Fragment] subclass.
@@ -21,7 +12,7 @@ import java.util.ArrayList
  * create an instance of this fragment.
  */
 class FeedFragment : Fragment() {
-    var products: ArrayList<Product>? = null
+
 
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
@@ -32,28 +23,14 @@ class FeedFragment : Fragment() {
             mParam1 = requireArguments().getString(ARG_PARAM1)
             mParam2 = requireArguments().getString(ARG_PARAM2)
         }
-        products = createProductsList(10)
-        Log.d("saioufe", "num of items in onCreate() : " + products!!.size)
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.fragment_feed, container, false)
-        // Lookup the recyclerview in activity layout
-        val rvProducts = v.findViewById<View>(R.id.feed_recycler) as RecyclerView
-
-        // Create adapter passing in the sample user data
-        val adapter = ProductsAdaptor(products!!)
-        // Attach the adapter to the recyclerview to populate items
-        rvProducts.adapter = adapter
-        // Set layout manager to position the items
-        rvProducts.layoutManager = LinearLayoutManager(container!!.context)
-        // That's all!
-        Log.d("saioufe", "num of items in onCreateView() : " + products!!.size)
-        // Inflate the layout for this fragment
-        return v
+        return inflater.inflate(R.layout.fragment_feed, container, false)
     }
 
     companion object {

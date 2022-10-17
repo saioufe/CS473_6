@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ScreenDesign1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ScreenDesign1" parent="Theme.AppCompat.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary</item>
@@ -14,6 +14,10 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimaryDark">#3F51B5</item>
+        <item name="colorAccent">@color/profileAccentColor</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

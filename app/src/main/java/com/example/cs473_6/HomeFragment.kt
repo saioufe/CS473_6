@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.cs473_6.adaptors.CustomGridAdaptor
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.ArrayList
 
 /**
@@ -19,6 +20,7 @@ import java.util.ArrayList
  */
 class HomeFragment : Fragment() {
     lateinit var gridView: GridView
+    lateinit var bottomBar: BottomNavigationView
     var itemsList: MutableList<Items> = ArrayList()
 
     // TODO: Rename and change types of parameters
@@ -26,10 +28,6 @@ class HomeFragment : Fragment() {
     private var mParam2: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            mParam1 = requireArguments().getString(ARG_PARAM1)
-            mParam2 = requireArguments().getString(ARG_PARAM2)
-        }
         itemsList.clear()
         itemsList.add(Items(R.drawable.ic_overview_foreground, "Overview"))
         itemsList.add(Items(R.drawable.ic_aboutme_foreground, "About Me"))
@@ -41,35 +39,17 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val v2 = inflater.inflate(R.layout.activity_main,container,false)
+        bottomBar = v2.findViewById(R.id.bottom_navigation_view)
+
+
         val v = inflater.inflate(R.layout.fragment_home, container, false)
         gridView = v.findViewById(R.id.main_grid_view)
-        val customAdapter = CustomGridAdaptor(requireActivity(), R.layout.home_grid_element, itemsList)
+        val customAdapter = CustomGridAdaptor(requireActivity(), R.layout.home_grid_element, itemsList , bottomBar)
         gridView.setAdapter(customAdapter)
+
+
         return v
     }
 
-    companion object {
-        // TODO: Rename parameter arguments, choose names that match
-        // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-        private const val ARG_PARAM1 = "param1"
-        private const val ARG_PARAM2 = "param2"
-
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        fun newInstance(param1: String?, param2: String?): HomeFragment {
-            val fragment = HomeFragment()
-            val args = Bundle()
-            args.putString(ARG_PARAM1, param1)
-            args.putString(ARG_PARAM2, param2)
-            fragment.arguments = args
-            return fragment
-        }
-    }
 }

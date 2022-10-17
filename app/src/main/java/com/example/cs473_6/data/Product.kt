@@ -5,35 +5,44 @@ import java.util.*
 
 class Product(
     var name: String,
-    var price: Double,
-    var numOfRecommandations: String,
-    var image: String
+    var companyName: String,
+    var description: String
 ) {
-    var usersImages: List<String>? = null
 
     companion object {
-        private var lastProductsId = 0
-        @JvmStatic
-        fun createProductsList(numProducts: Int): ArrayList<Product> {
-            lastProductsId = 0
-            val products = ArrayList<Product>()
-            val images = ArrayList<String>()
 
-            // images.add("https://d33p2k2w4zpozf.cloudfront.net/media/catalog/product/cache/6f8b1f57af8facbd0f9bed0480a4b89a/b/e/beyerdynamic-dt-250-perspective_transparent.png");
-            images.add("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX472_AV4?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1570119352353")
-            images.add("https://images.pexels.com/photos/335257/pexels-photo-335257.jpeg?cs=srgb&dl=pexels-eprism-studio-335257.jpg&fm=jpg")
-            images.add("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80")
-            images.add("https://cdn.shopify.com/s/files/1/2303/2711/files/2_e822dae0-14df-4cb8-b145-ea4dc0966b34.jpg?v=1617059123")
-            images.add("https://assets.crowdspring.com/marketing/landing-page/crowdspring-product-design-phase1-1120.jpg")
-            images.add("https://images.unsplash.com/photo-1630688231126-dd36840fce51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdCUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&w=1000&q=80")
-            images.add("https://petapixel.com/assets/uploads/2017/03/product1.jpeg")
-            images.add("https://images.ctfassets.net/2d5q1td6cyxq/4kmwcxuqXxUxUVfggQhbiI/650b0af104bfdf9979545eb326786243/Hero-hottoddy_.jpg")
-            images.add("https://www.prodigi.com/img/blog/photo-ideas-16.jpg")
-            images.add("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c4dbfb65716923.5afd9efd6d450.jpg")
-            for (i in 1..numProducts) {
-                val imageUrl = images[Random().nextInt(images.size)]
-                products.add(Product("product " + ++lastProductsId, 99.99, "+241", imageUrl))
-            }
+        @JvmStatic
+        fun createExperienceList(): ArrayList<Product> {
+            val products = ArrayList<Product>()
+            products.add(Product("Founder, CEO & Lead Designer", "SpaceX - Space Exploration Technologies" +
+                    "", "Successfully launched Falcon Heavy, the most powerful operationa\n" +
+                    "rocket in the world by a factor of two, with the ability to lift into\n" +
+                    "orbit nearlv 64 metric tons 141.000 b) - a mass greater than a\n" +
+                    "13/ jetliner loaded with passengers, crew, luggage and ruel."))
+            products.add(Product("Founder", "The Boring Company" +
+                    "", "Raised \$10m by selling 20.000 flamethrowers in 4 days.\n" +
+                    "\" Raised \$1m by selling 50.00 baseball caps.\n" +
+                    "Hyperloop - an ultra high-speed underground public\n" +
+                    "transportation system in which passengers are transported on\n" +
+                    "autonomous electric pods traveling at 600+ miles per hour in ¿\n" +
+                    "pressurized caoin."))
+            products.add(Product("CEO and Product Architect", "Tesla Inc." +
+                    "", "Global sales passed 250,000 units in September 2017.\n" +
+                    "- Consumer Reports named Tesla as the top American car brand and\n" +
+                    "ranked it 8th among global carmakers in February 2017. C\n" +
+                    "I Consumer Reports Annual Owner Satisraction Survev at\n" +
+                    "91% in 2016."))
+            products.add(Product("Co-founder and Former Chairman", "SolarCity (subsidiary of Tesla Inc.)" +
+                    "", "Merged the company with Tesla Inc. and now offers energy\n" +
+                    "storage services through Tesla, including a turnkey residential\n" +
+                    "battery backup service that incorporates Tesla's Powerwall.\n" +
+                    "- In 2015, installed 870MW of solar power, approximately 28% of\n" +
+                    "non-utility solar installation in the U.S. that year. C"))
+            products.add(Product("Founder & CEO", "Neurolink" +
+                    "", "A companv aIms to make devices to treat serous\n" +
+                    "San Francisco. USA\n" +
+                    "diseases in the short-term. with the eventual doal or human\n" +
+                    "enhancement."))
             return products
         }
     }

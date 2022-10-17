@@ -12,8 +12,8 @@ import android.widget.ImageView
 import com.example.cs473_6.R
 import android.widget.TextView
 
-class ProductsAdaptor(private val products: List<Product>) :
-    RecyclerView.Adapter<ProductsAdaptor.ViewHolder>() {
+class ExperienceAdaptor(private val products: List<Product>) :
+    RecyclerView.Adapter<ExperienceAdaptor.ViewHolder>() {
     init {
         Picasso.get().isLoggingEnabled = true
     }
@@ -27,7 +27,7 @@ class ProductsAdaptor(private val products: List<Product>) :
 
         // Inflate the custom layout
         val productView =
-            inflater.inflate(R.layout.item_product, parent, false)
+            inflater.inflate(R.layout.item_experience, parent, false)
 
         // Return a new holder instance
         return ViewHolder(productView)
@@ -41,11 +41,9 @@ class ProductsAdaptor(private val products: List<Product>) :
         val textView = holder.nameTextView
         textView.text = product.name
         val textView2 = holder.priceTextView
-        textView2.text = "$" + product.price
+        textView2.text = product.companyName
         val textView3 = holder.recomTextView
-        textView3.text = product.numOfRecommandations + "recommendations"
-        val imageView = holder.imageImageView
-        Picasso.get().load(product.image).placeholder(R.drawable.product1).into(imageView)
+        textView3.text = product.description
         // Glide.with(imageView).load(product.getImage()).into(imageView);
     }
 
@@ -57,13 +55,11 @@ class ProductsAdaptor(private val products: List<Product>) :
         var nameTextView: TextView
         var priceTextView: TextView
         var recomTextView: TextView
-        var imageImageView: ImageView
 
         init {
             nameTextView = itemView.findViewById<View>(R.id.product_title) as TextView
             priceTextView = itemView.findViewById<View>(R.id.product_price) as TextView
             recomTextView = itemView.findViewById<View>(R.id.product_rec) as TextView
-            imageImageView = itemView.findViewById<View>(R.id.product_image) as ImageView
         }
     }
 }
