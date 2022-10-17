@@ -2,17 +2,16 @@ package com.example.cs473_6.adaptors
 
 
 
-import com.example.cs473_6.data.Product
+import com.example.cs473_6.data.Job
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.ImageView
 import com.example.cs473_6.R
 import android.widget.TextView
 
-class ExperienceAdaptor(private val products: List<Product>) :
+class ExperienceAdaptor(private val jobs: List<Job>) :
     RecyclerView.Adapter<ExperienceAdaptor.ViewHolder>() {
     init {
         Picasso.get().isLoggingEnabled = true
@@ -35,7 +34,7 @@ class ExperienceAdaptor(private val products: List<Product>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // Get the data model based on position
-        val product = products[position]
+        val product = jobs[position]
 
         // Set item views based on your views and data model
         val textView = holder.nameTextView
@@ -48,7 +47,7 @@ class ExperienceAdaptor(private val products: List<Product>) :
     }
 
     override fun getItemCount(): Int {
-        return products.size
+        return jobs.size
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
